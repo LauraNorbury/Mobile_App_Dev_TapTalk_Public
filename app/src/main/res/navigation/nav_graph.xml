@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashscreen">
+
+    <!-- Splash Screen Fragment -->
+    <fragment
+        android:id="@+id/splashscreen"
+        android:name="com.example.v3_pub.SplashScreen"
+        android:label="Splash Screen"
+        tools:layout="@layout/splashscreen">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <!-- Login Fragment -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.v3_pub.LoginScreen"
+        android:label="Login"
+        tools:layout="@layout/fragment_login"
+        >
+
+
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+
+    <!-- Registration Fragment -->
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.v3_pub.RegisterScreen"
+        android:label="Register"
+        tools:layout="@layout/fragment_registration">
+
+
+        <action
+            android:id="@+id/action_registrationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+
+
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.v3_pub.HomeScreen"
+        android:label="Home Screen"
+        tools:layout="@layout/fragment_home">
+
+
+        <action
+            android:id="@+id/action_home_to_pubs"
+            app:destination="@id/pubsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aboutCityScreen"
+            app:destination="@id/aboutCityScreen" />
+        <action
+            android:id="@+id/action_home_to_maps"
+            app:destination="@id/mapsFragment" />
+
+    </fragment>
+
+
+
+    <!-- Recipe List Fragment -->
+
+    <fragment
+        android:id="@+id/recipeListFragment"
+        android:name="com.example.v3_pub.RecipeListFragment"
+        android:label="Recipe List"
+        tools:layout="@layout/fragment_recipe_list">
+        <action
+            android:id="@+id/action_recipeListFragment_to_addEditRecipeFragment"
+            app:destination="@id/addEditRecipeFragment" />
+    </fragment>
+
+
+    <!-- Add/Edit the recipes Fragment -->
+
+    <fragment
+        android:id="@+id/addEditRecipeFragment"
+        android:name="com.example.v3_pub.AddEditRecipeScreen"
+        android:label="Add/Edit Recipe"
+        tools:layout="@layout/fragment_add_edit_recipe">
+
+        <!--  not really sure why this is red but it doesnt break-->
+        <argument
+            android:name="recipeId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+
+
+        <action
+            android:id="@+id/action_addEditRecipeFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_homeFragment_to_recipeListFragment"
+        app:destination="@id/recipeListFragment"/>
+
+    <!-- This section for the about the city card -->
+
+    <fragment
+        android:id="@+id/aboutCityScreen"
+        android:name="com.example.v3_pub.AboutCityScreen"
+        android:label="About City" />
+
+
+    <!-- maps is here -->
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.v3_pub.MapsScreen"
+        android:label="Map Screen"
+        tools:layout="@layout/fragment_maps_screen">
+
+    </fragment>
+
+
+
+
+
+    <!-- Pubs Fragment -->
+    <fragment
+        android:id="@+id/pubsFragment"
+        android:name="com.example.v3_pub.PubsScreen"
+        android:label="Pubs Screen"
+        tools:layout="@layout/fragment_pubs">
+        <action
+            android:id="@+id/action_pubs_to_home"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_pubs_to_reviews"
+            app:destination="@id/reviewsFragment" />
+    </fragment>
+
+
+    <!-- Add Review Fragment -->
+    <fragment
+        android:id="@+id/reviewsFragment"
+        android:name="com.example.v3_pub.PubDetail"
+        android:label="Pub Details"
+        tools:layout="@layout/fragment_pub_detail">
+
+        <action
+            android:id="@+id/action_reviews_to_pubs"
+            app:destination="@id/pubsFragment" />
+        <action
+            android:id="@+id/action_pubDetailFragment_to_editScreen"
+            app:destination="@id/editScreenFragment" />
+    </fragment>
+
+    <!-- edit screen fragmetn -->
+
+    <fragment
+        android:id="@+id/editScreenFragment"
+        android:name="com.example.v3_pub.EditScreen"
+        android:label="Edit Review"
+        tools:layout="@layout/fragment_edit_screen" />
+
+    <!-- add review frag -->
+
+    <fragment
+        android:id="@+id/addReviewFragment"
+        android:name="com.example.v3_pub.AddReviewScreen"
+        android:label="Add Review"
+        tools:layout="@layout/fragment_add_review">
+        <!-- action to return to Pub Details -->
+        <action
+            android:id="@+id/action_addReviewFragment_to_pubDetails"
+            app:destination="@id/reviewsFragment" />
+    </fragment>
+
+    <!-- Favourites Screen  -->
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.example.v3_pub.FavouritesScreen"
+        android:label="Favourites"
+        />
+
+
+
+</navigation>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tap Talk</string>
+    <string name="daily_quote">"Beer Today, Gone Tomorrow"</string>
+    <string name="subheading_text">"Hello1"</string>
+    <string name="greeting_message">"hello2"</string>
+    <string name="pubs">"Pubs"</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+</resources>

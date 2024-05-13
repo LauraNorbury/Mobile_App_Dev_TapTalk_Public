@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+<style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+
+
+
+    <!-- Primary and secondary color usage -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+    <item name="colorSecondary">@color/colorSecondary</item>
+    <item name="colorSecondaryVariant">@color/colorSecondaryDark</item>
+
+    <!-- Ensure text on primary and secondary colors is white -->
+    <item name="colorOnPrimary">@color/white</item>
+    <item name="colorOnSecondary">@color/white</item>
+
+    <!-- Customize status bar and navigation bar colors -->
+    <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    <item name="android:navigationBarColor">@color/colorPrimary</item>
+
+    <!-- Toolbar and ActionBar themes -->
+    <item name="actionBarTheme">@style/MyActionBarTheme</item>
+    <item name="toolbarStyle">@style/MyToolbarStyle</item>
+</style>
+
+
+
+    <!-- ActionBar customization -->
+<style name="MyActionBarTheme" parent="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+<item name="android:textColorPrimary">@color/white</item>
+<item name="android:background">@color/colorPrimary</item>
+</style>
+
+    <!-- Toolbar customization -->
+<style name="MyToolbarStyle" parent="Widget.MaterialComponents.Toolbar.Primary">
+<item name="titleTextAppearance">@style/MyTitleTextAppearance</item>
+</style>
+
+    <!-- Toolbar title text appearance -->
+<style name="MyTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+<item name="android:textSize">20sp</item>
+<item name="android:textColor">@color/white</item>
+</style>
+
+    <!-- EditText styles -->
+    <style name="MyEditTextStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- Text color and hint color inside the text field -->
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+
+        <!-- Customizing the floating label appearance -->
+        <item name="hintTextAppearance">@style/FloatingLabelAppearance</item>
+
+        <!-- Define the stroke color for focused and unfocused states -->
+        <item name="boxStrokeColor">@color/LightRed</item> <!-- Active state -->
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="colorOnSurface">@color/white</item> <!-- Inactive state of the outline -->
+    </style>
+
+    <style name="FloatingLabelAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item> <!-- Optional, adjust size as needed -->
+    </style>
+
+
+    <!-- Hint text appearance for better visibility -->
+
+</resources>
